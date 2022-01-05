@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Loaners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Borrowed amonunt</th>
+      <th>Duration</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @loaners.each do |loaner| %>
+      <tr>
+        <td><%= loaner.borrowed_amonunt %></td>
+        <td><%= loaner.duration %></td>
+        <td><%= link_to 'Show', loaner %></td>
+        <td><%= link_to 'Edit', edit_loaner_path(loaner) %></td>
+        <td><%= link_to 'Destroy', loaner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Loaner', new_loaner_path %>

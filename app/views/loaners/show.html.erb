@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Borrowed amonunt:</strong>
+  <%= @loaner.borrowed_amonunt %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @loaner.duration %>
+</p>
+
+<%= link_to 'Edit', edit_loaner_path(@loaner) %> |
+<%= link_to 'Back', loaners_path %>

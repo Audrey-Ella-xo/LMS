@@ -1,0 +1,27 @@
+<%= form_with(model: loaner) do |form| %>
+  <% if loaner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loaner.errors.count, "error") %> prohibited this loaner from being saved:</h2>
+
+      <ul>
+        <% loaner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :borrowed_amonunt %>
+    <%= form.number_field :borrowed_amonunt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
