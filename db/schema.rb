@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_05_152611) do
+ActiveRecord::Schema.define(version: 2022_01_06_092853) do
 
   create_table "loaners", force: :cascade do |t|
     t.integer "borrowed_amonunt"
     t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.date "DOB"
+    t.string "Address"
+    t.string "workplace_address"
+    t.string "workplace"
+    t.integer "monthly_net"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -31,4 +45,5 @@ ActiveRecord::Schema.define(version: 2022_01_05_152611) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "profiles", "users"
 end
