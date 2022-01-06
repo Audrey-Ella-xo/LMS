@@ -35,5 +35,7 @@
   <%= @profile.monthly_net %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', request.referrer, method: :get %>
+<div class="btn-box">
+  <%= link_to 'Edit', edit_profile_path(@profile) %> |
+  <%= link_to 'Back', request.referrer, method: :get %>
+</div>

@@ -63,3 +63,13 @@ div.actions {
 
 label {
   display: block; }
+
+.btn-box {
+  width: 100%;
+  max-width: 665px;
+  margin: auto;
+  .button_to {
+    display: inline;
+  }
+  background: rgb(170, 223, 205);
+}

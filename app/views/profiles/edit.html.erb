@@ -2,5 +2,7 @@
 
 <%= render 'form', profile: @profile %>
 
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', request.referrer, method: :get %>
+<div class="btn-box">
+    <%= link_to 'Show', @profile %> |
+    <%= link_to 'Back', request.referrer, method: :get %>
+</div>
