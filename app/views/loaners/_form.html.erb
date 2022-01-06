@@ -12,13 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label "How much do you want to borrow?" %>
-    <%= form.number_field :borrowed_amonunt %>
+    <%= form.label "How much do you want to borrow?", class: "form-label" %>
+    <span class="font-weight-bold indigo-text mr-2 mt-1">N50,000</span>
+    <%= form.number_field :borrowed_amonunt, type: "range", class: "form-range", min: "50000", max: "200000", id: "customRange2" %>
+    <span class="font-weight-bold indigo-text ml-2 mt-1">N200,000</span>
   </div>
 
   <div class="field">
     <%= form.label "For how long?" %>
-    <%= form.number_field :duration %>
+    <%= form.number_field :duration, placeholder: "Enter number of weeks only." %>
   </div>
 
   <div class="actions">
