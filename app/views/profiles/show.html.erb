@@ -1,41 +1,62 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @profile.firstname %>
-</p>
+<h2> My Profile</h2>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @profile.lastname %>
-</p>
+<%= form_with(model: @profile) do |form| %>
+  
+  <div class="field row mb-3">
+      <%= form.label "First Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :firstname, readonly:true %>
+      </div>
+  </div>
 
-<p>
-  <strong>Dob:</strong>
-  <%= @profile.DOB %>
-</p>
+  <div class="field row mb-3">
+      <%= form.label "Last Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :lastname, readonly:true %>
+      </div>
+  </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @profile.Address %>
-</p>
+<div class="field row mb-3">
+      <%= form.label "Date of Birth", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :DOB, readonly:true %>
+      </div>
+  </div>
 
-<p>
-  <strong>Workplace address:</strong>
-  <%= @profile.workplace_address %>
-</p>
+  <div class="field row mb-3">
+      <%= form.label "Home Address", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :Address, readonly:true %>
+      </div>
+  </div>
 
-<p>
-  <strong>Workplace:</strong>
-  <%= @profile.workplace %>
-</p>
+  <div class="field row mb-3">
+      <%= form.label "Workplace Address", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :workplace_address, readonly:true %>
+      </div>
+  </div>
 
-<p>
-  <strong>Monthly net:</strong>
-  <%= @profile.monthly_net %>
-</p>
+  <div class="field row mb-3">
+      <%= form.label "Workplace Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :workplace, readonly:true %>
+      </div>
+  </div>
 
-<div class="btn-box">
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <%= link_to 'Back', request.referrer, method: :get %>
-</div>
+  <div class="field row mb-3">
+      <%= form.label "Monthly Net", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :monthly_net, readonly:true %>
+      </div>
+  </div>
+
+  <div class="actions">
+    <div class="btn-box">
+      <%= link_to 'Edit', edit_profile_path(@profile) %> |
+      <%= link_to 'Back', request.referrer, method: :get %>
+    </div>
+  </div>
+<% end %>

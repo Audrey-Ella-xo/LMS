@@ -1,3 +1,9 @@
+$primary-color-dark: #5fb523;
+$primary-color: #8bc34a;
+$primary-color-light: #dcedc8;
+$primary-color-text: #212121;
+$divider-color: #bdbdbd;
+
 body {
   background-color: #fff;
   color: #333;
@@ -14,7 +20,9 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000; }
+  text-decoration: none;
+  color: $primary-color-text;
+}
 
 a:visited {
   color: #666; }
@@ -64,6 +72,8 @@ div.actions {
 label {
   display: block; }
 
+// Custom Styling starts here!!!
+
 .btn-box {
   width: 100%;
   max-width: 665px;
@@ -72,7 +82,7 @@ label {
   .button_to {
     display: inline;
   }
-  background: #5fb523;;
+  background: $primary-color-dark;;
 }
 
 .showcase {
@@ -93,7 +103,69 @@ label {
     padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #5fb523;
+  background-color: $primary-color-dark;
   color: white;
+  }
+}
+
+form {
+  width: 80%;
+  margin: 8px 0;
+
+  .field {
+    width: 100%;
+    padding: 8px 0px;
+    label {
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid $divider-color;
+      border-radius: 4px;
+      padding: 8px;
+      background-color: $primary-color-light;
+    }
+
+    input[type="checkbox"] {
+      width: fit-content;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+  }
+  input[type="submit"] {
+    padding: 8px;
+    width: 50%;
+    border: none;
+    border-radius: 4px;
+    background-color: $primary-color-dark;
+    color: $primary-color-light;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  input[type="submit"]:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  .actions.reset {
+    input[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  #error_explanation {
+    h2 {
+      color: $primary-color-text;
+      font-size: 1em;
+    }
+    ul {
+      color: #f00;
+    }
   }
 }
