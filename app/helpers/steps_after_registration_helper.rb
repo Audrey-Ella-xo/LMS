@@ -1,0 +1,2 @@
+module StepsAfterRegistrationHelper
+end
