@@ -28,8 +28,10 @@ a:visited {
   color: #666; }
 
 a:hover {
-  color: #fff;
-  background-color: #000; }
+  color: $primary-color;
+  // background-color: #000;
+  text-decoration: none;
+}
 
 th {
   padding-bottom: 5px; }
@@ -79,10 +81,25 @@ label {
   max-width: 665px;
   margin: auto;
   text-align: center; 
+  padding: 20px;
   .button_to {
     display: inline;
   }
-  background: $primary-color-dark;;
+  background: $primary-color-dark;
+
+  a {
+    text-decoration: none;
+    color: $primary-color-light;
+  }
+  
+  a:visited {
+    color: #f0f0f0; }
+  
+  a:hover {
+    color: $primary-color-text;
+    font-size: larger;
+    text-decoration: none;
+  }
 }
 
 .showcase {
