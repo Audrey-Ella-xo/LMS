@@ -1,5 +1,5 @@
 class LoanersController < ApplicationController
-  before_action :set_loaner, only: %i[ show edit update destroy ]
+  before_action :set_loaner, only: %i[ show ]
 
   # GET /loaners or /loaners.json
   def index
@@ -15,10 +15,6 @@ class LoanersController < ApplicationController
     @loaner = Loaner.new
   end
 
-  # GET /loaners/1/edit
-  def edit
-  end
-
   # POST /loaners or /loaners.json
   def create
     @loaner = Loaner.new(loaner_params)
@@ -31,29 +27,6 @@ class LoanersController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @loaner.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /loaners/1 or /loaners/1.json
-  def update
-    respond_to do |format|
-      if @loaner.update(loaner_params)
-        format.html { redirect_to loaner_url(@loaner), notice: "Loaner was successfully updated." }
-        format.json { render :show, status: :ok, location: @loaner }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @loaner.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /loaners/1 or /loaners/1.json
-  def destroy
-    @loaner.destroy
-
-    respond_to do |format|
-      format.html { redirect_to loaners_url, notice: "Loaner was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 
