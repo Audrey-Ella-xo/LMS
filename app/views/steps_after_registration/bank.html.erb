@@ -1,6 +1,24 @@
-<h1>Bank page</h1>
+<h1>Detail of Bank to be Credit for Loan</h1>
 
-  <div class="actions">
-    <%= button_to "Continue" %>
-    or <%= link_to "skip this step", next_wizard_path %>
+<%= render layout: 'form' do |form| %>
+
+  <div class="field">
+    <%= form.label :acc_name %>
+    <%= form.text_field :acc_name %>
   </div>
+
+    <div class="field">
+    <%= form.label :bank_name %>
+    <%= form.text_field :bank_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acc_number %>
+    <%= form.text_field :acc_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :branch_name %>
+    <%= form.text_field :branch_name %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_071804) do
+ActiveRecord::Schema.define(version: 2022_01_10_074209) do
 
   create_table "loaners", force: :cascade do |t|
     t.integer "borrowed_amonunt"
@@ -35,6 +35,10 @@ ActiveRecord::Schema.define(version: 2022_01_10_071804) do
     t.string "gender"
     t.string "phone"
     t.string "nationality"
+    t.string "acc_name"
+    t.string "bank_name"
+    t.string "acc_number"
+    t.string "branch_name"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
