@@ -104,27 +104,55 @@
   </div>
 
   <div class="field row mb-3">
-    <h2>Employer Section</h2>
+    <h2>Employer/Business Information Section</h2>
   </div>
 
   <div class="field row mb-3">
-      <%= form.label "Workplace Address", class: "col-sm-2 col-form-label" %>
-      <div class="col-sm-10">
-        <%= form.text_field :workplace_address, readonly:true %>
-      </div>
-  </div>
-
-  <div class="field row mb-3">
-      <%= form.label "Workplace Name", class: "col-sm-2 col-form-label" %>
+      <%= form.label "Name of Employer/Business", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
         <%= form.text_field :workplace, readonly:true %>
       </div>
   </div>
 
   <div class="field row mb-3">
-      <%= form.label "Monthly Net", class: "col-sm-2 col-form-label" %>
+      <%= form.label "Business/Employer's Address", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :workplace_address, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Business/Employer's Phone Number", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :emp_phone, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Duration of Employment", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :emp_duration, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Job Title", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :job_title, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Annual Gross Salary(NGN)", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
         <%= form.text_field :monthly_net, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Other Income (NGN)", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :other_income, readonly:true %>
       </div>
   </div>
 

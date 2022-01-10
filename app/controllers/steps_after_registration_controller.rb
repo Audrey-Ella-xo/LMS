@@ -21,7 +21,7 @@ private
   end
 
   def profile_params
-    params.require(:profile).permit(:firstname, :lastname, :DOB, :Address, :workplace_address, :workplace, :monthly_net, :title, :marital_status, :gender, :phone, :nationality, :acc_name, :bank_name, :acc_number, :branch_name)
+    params.require(:profile).permit(:firstname, :lastname, :DOB, :Address, :workplace_address, :workplace, :monthly_net, :title, :marital_status, :gender, :phone, :nationality, :acc_name, :bank_name, :acc_number, :branch_name, :emp_phone, :emp_duration, :job_title, :other_income)
   end
   
 end

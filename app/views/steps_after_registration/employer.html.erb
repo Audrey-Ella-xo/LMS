@@ -1,36 +1,40 @@
 <h1>employer and work  page</h1>
 
-<%= form_for @profile, url: wizard_path do |form| %>
-  <% if @profile.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
-
-      <ul>
-        <% @profile.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render layout: 'form' do |form| %>
 
   <div class="field">
-    <%= form.label :workplace_address %>
-    <%= form.text_field :workplace_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :workplace %>
+    <%= form.label "Name of Employer/Business" %>
     <%= form.text_field :workplace %>
   </div>
 
   <div class="field">
-    <%= form.label :monthly_net %>
+    <%= form.label "Business/Employer's Address" %>
+    <%= form.text_field :workplace_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Business/Employer's Phone Number" %>
+    <%= form.text_field :emp_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Duration of Employment" %>
+    <%= form.text_field :emp_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :job_title %>
+    <%= form.text_field :job_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Annual Gross Salary (NGN)" %>
     <%= form.number_field :monthly_net %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-    or <%= link_to "skip this step", next_wizard_path %>
+  <div class="field">
+    <%= form.label "Other Income (NGN)" %>
+    <%= form.number_field :other_income %>
   </div>
 <% end %>
 
