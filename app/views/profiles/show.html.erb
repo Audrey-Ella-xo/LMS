@@ -55,7 +55,9 @@
 
   <div class="actions">
     <div class="btn-box">
-      <%= link_to 'Edit', edit_profile_path(@profile) %> |
+      <%# <%= link_to 'Edit', edit_profile_path(@profile) %> %>
+      <%= link_to 'Edit', steps_after_registration_path(:personal) %>
+      <%# <%= link_to 'Edit', edit_profile_path(@profile) | %> %>
       <%= link_to 'Back', request.referrer, method: :get %>
     </div>
   </div>
