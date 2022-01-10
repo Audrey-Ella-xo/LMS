@@ -3,6 +3,16 @@
 <%= render layout: 'form' do |form| %>
 
   <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+    <div class="field">
+    <%= form.label :marital_status %>
+    <%= form.text_field :marital_status %>
+  </div>
+
+  <div class="field">
     <%= form.label :firstname %>
     <%= form.text_field :firstname %>
   </div>
@@ -20,6 +30,21 @@
   <div class="field">
     <%= form.label :Address %>
     <%= form.text_field :Address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+   <div class="field">
+    <%= form.label :nationality %>
+    <%= form.text_field :nationality %>
   </div>
 <% end %>
 
