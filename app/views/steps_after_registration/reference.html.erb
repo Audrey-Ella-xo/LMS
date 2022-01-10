@@ -1,6 +1,39 @@
 <h1>Referees page</h1>
 
-  <div class="actions">
-    <%= button_to "Continue" %>
-    or <%= link_to "skip this step", next_wizard_path %>
+<%= render layout: 'form' do |form| %>
+
+  <div class="field">
+    <%= form.label :ref_title %>
+    <%= form.text_field :ref_title %>
   </div>
+
+    <div class="field">
+    <%= form.label :ref_gender %>
+    <%= form.text_field :ref_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ref_firstname %>
+    <%= form.text_field :ref_firstname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ref_lastname %>
+    <%= form.text_field :ref_lastname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ref_address %>
+    <%= form.text_field :ref_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ref_phone %>
+    <%= form.text_field :ref_phone %>
+  </div>
+
+   <div class="field">
+    <%= form.label :ref_email %>
+    <%= form.text_field :ref_email %>
+  </div>
+<% end %>

@@ -156,6 +156,59 @@
       </div>
   </div>
 
+  <div class="field row mb-3">
+    <h2>Referees Section</h2>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Title", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_title, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Gender", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_gender, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "First Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_firstname, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Last Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_lastname, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Address", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_address, readonly:true %>
+      </div>
+  </div> 
+
+  <div class="field row mb-3">
+      <%= form.label "Phone Number", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_phone, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Email", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :ref_email, readonly:true %>
+      </div>
+  </div>
+
   <div class="actions">
     <div class="btn-box">
       <%# <%= link_to 'Edit', edit_profile_path(@profile) %> %>
