@@ -6,14 +6,11 @@
       <%= link_to "GET Declaration", declaration_path, target: "_blank" %>
   </div>
 
-  <p>Upload signed declaration below;</p>
-
   <%= render layout: 'form' do |form| %>
 
     <div class="declaration upload field">
-      <%# <%= link_to "GET Declaration", declaration_path, target: "_blank" %> %>
-      <%= form.label :attachment %>   
-      <%= form.file_field :attachment %>  
+      <%= form.label "Upload Signed Declaration" %>   
+      <%= form.file_field :attachment, target: "_blank" %>  
     </div> 
 
   <% end %>

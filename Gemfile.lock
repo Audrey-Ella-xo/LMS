@@ -271,6 +271,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)
+  mini_magick
   omniauth
   pg
   puma (~> 5.0)

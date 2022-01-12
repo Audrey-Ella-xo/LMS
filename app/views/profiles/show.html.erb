@@ -43,11 +43,19 @@
       </div>
   </div>
 
-<div class="field row mb-3">
+  <div class="field row mb-3">
       <%= form.label "Date of Birth", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
         <%= form.text_field :DOB, readonly:true %>
       </div>
+  </div>
+
+  <div class="field row mb-3">
+    <%= form.label "Download Identification", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+     <iframe src=<%= @profile.identification_url %> width="400" height="400" style="border: none;" overflow="hidden"> </iframe>
+      <%= link_to 'Download Means of Identification', @profile.identification_url, target: "_blank" %>
+    </div>
   </div>
 
   <div class="field row mb-3">
@@ -209,11 +217,23 @@
       </div>
   </div>
 
+  <div class="field row mb-3">
+    <h2>Declaration Section</h2>
+  </div>
+
+  <div class="field row mb-3">
+    <%= form.label "Download Declaration", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <iframe src=<%= @profile.attachment_url %> width="600" height="780" style="border: none;"> </iframe>
+      <%= link_to 'Download Declaration', @profile.attachment_url %>
+    </div>
+  </div>
+
+  <td></td>
+
   <div class="actions">
     <div class="btn-box">
-      <%# <%= link_to 'Edit', edit_profile_path(@profile) %> %>
-      <%= link_to 'Edit', steps_after_registration_path(:personal) %>
-      <%# <%= link_to 'Edit', edit_profile_path(@profile) | %> %>
+      <%= link_to 'Edit', steps_after_registration_path(:personal) %>|
       <%= link_to 'Back', request.referrer, method: :get %>
     </div>
   </div>
