@@ -1,6 +1,19 @@
 <h1>declaration page</h1>
 
-  <div class="actions">
-    <%= button_to "Continue" %>
-    or <%= link_to "skip this step", next_wizard_path %>
+<h3>Kindly download and read the declaration carefuly and upload a signed copy when you are done.</h3> 
+
+  <div class="full-article">
+      <%= link_to "GET Declaration", declaration_path, target: "_blank" %>
   </div>
+
+  <p>Upload signed declaration below;</p>
+
+  <%= render layout: 'form' do |form| %>
+
+    <div class="declaration upload field">
+      <%# <%= link_to "GET Declaration", declaration_path, target: "_blank" %> %>
+      <%= form.label :attachment %>   
+      <%= form.file_field :attachment %>  
+    </div> 
+
+  <% end %>

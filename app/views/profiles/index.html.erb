@@ -12,6 +12,7 @@
       <th>Workplace address</th>
       <th>Workplace</th>
       <th>Monthly net</th>
+      <th>Declaration Download</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= profile.workplace_address %></td>
         <td><%= profile.workplace %></td>
         <td><%= profile.monthly_net %></td>
+        <td><%= link_to 'Download Declaration', profile.attachment_url %></td>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
         <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
