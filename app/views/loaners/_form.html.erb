@@ -15,14 +15,55 @@
     <%= form.label "How much do you want to borrow?", class: "form-label" %>
     <div class="d-flex justify-content-center my-4" >
     <span class="font-weight-bold indigo-text mr-2 mt-1">N50,000</span>
-    <%= form.number_field :borrowed_amonunt, type: "range", class: "form-range", min: "50000", max: "200000", id: "customRange2" %>
+    <%= form.number_field :amount, type: "range", class: "form-range", min: "50000", max: "200000", id: "customRange2" %>
     <span class="font-weight-bold indigo-text ml-2 mt-1">N200,000</span>
     </div>
   </div>
 
   <div class="field">
+    <%= form.label "Amount in Words" %>
+    <%= form.text_field :amt_words, placeholder: "Enter amount in words." %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date %>
+  </div>
+
+
+  <div class="field">
     <%= form.label "For how long?" %>
     <%= form.number_field :duration, placeholder: "Enter number of weeks only." %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Purpose for Loan?" %>
+    <%= form.number_field :purpose, placeholder: "Enter number of weeks only." %>
+  </div>  
+
+  <div class="field">
+    <%= form.label :pay_mode %>
+    <%= form.text_field :pay_mode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rate %>
+    <%= form.text_field :rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Amount owed to other finance institutes" %>
+    <%= form.text_field :amt_owed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bank_name %>
+    <%= form.text_field :bank_name %>
   </div>
 
   <div class="actions">

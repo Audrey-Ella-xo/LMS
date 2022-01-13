@@ -3,7 +3,7 @@ class LoanersController < ApplicationController
 
   # GET /loaners or /loaners.json
   def index
-    @loaners = Loaner.all
+    @loaners = current_user.Loaners.all
   end
 
   # GET /loaners/1 or /loaners/1.json
@@ -17,7 +17,7 @@ class LoanersController < ApplicationController
 
   # POST /loaners or /loaners.json
   def create
-    @loaner = Loaner.new(loaner_params)
+    @loaner = current_user.Loaners.build(loaner_params)
 
     respond_to do |format|
       if @loaner.save
@@ -38,6 +38,6 @@ class LoanersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def loaner_params
-      params.require(:loaner).permit(:borrowed_amonunt, :duration)
+      params.require(:loaner).permit(:amount, :duration, :amt_owed, :amt_words, :purpose, :start_date, :end_date, :pay_mode, :rate, :bank_name)
     end
 end

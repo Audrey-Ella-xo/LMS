@@ -7,12 +7,70 @@
   <div class="field row mb-3">
     <%= form.label "Borrowed Amount:", class: "form-label col-sm-2 col-form-label" %>
     <div class="col-sm-10">
-      <%= form.number_field :borrowed_amonunt, readonly:true %>
+      <div class="custom">
+      <%= number_to_currency(@loaner.amount, :unit => "NGN") %>
+      </div>
     </div>
   </div>
 
   <div class="field row mb-3">
-      <%= form.label "Duration in Weeks", class: "col-sm-2 col-form-label" %>
+    <%= form.label "Amount in words:", class: "form-label col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <%= form.text_field :amt_words, readonly:true %>
+    </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Start Date", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :start_date, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "End Date", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :end_date, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Purpose", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :purpose, readonly:true %>
+      </div>
+  </div>
+  
+  <div class="field row mb-3">
+      <%= form.label "Payment Mode", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :pay_mode, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Rate of Interest", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :rate, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Amount Owed", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :amt_owed, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Bank Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :bank_name, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Duration in Days", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
         <%= form.number_field :duration, readonly:true %>
       </div>
