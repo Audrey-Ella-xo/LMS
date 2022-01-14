@@ -34,6 +34,14 @@
       </div>
   </div>
 
+
+  <div class="field row mb-3">
+      <%= form.label "Duration in Days", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.number_field :duration, readonly:true %>
+      </div>
+  </div>
+
   <div class="field row mb-3">
       <%= form.label "Purpose", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
@@ -66,13 +74,6 @@
       <%= form.label "Bank Name", class: "col-sm-2 col-form-label" %>
       <div class="col-sm-10">
         <%= form.text_field :bank_name, readonly:true %>
-      </div>
-  </div>
-
-  <div class="field row mb-3">
-      <%= form.label "Duration in Days", class: "col-sm-2 col-form-label" %>
-      <div class="col-sm-10">
-        <%= form.number_field :duration, readonly:true %>
       </div>
   </div>
 

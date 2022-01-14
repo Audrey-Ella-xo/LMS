@@ -21,11 +21,6 @@
   </div>
 
   <div class="field">
-    <%= form.label "Amount in Words" %>
-    <%= form.text_field :amt_words, placeholder: "Enter amount in words." %>
-  </div>
-
-  <div class="field">
     <%= form.label :start_date %>
     <%= form.date_select :start_date %>
   </div>
@@ -35,15 +30,9 @@
     <%= form.date_select :end_date %>
   </div>
 
-
-  <div class="field">
-    <%= form.label "For how long?" %>
-    <%= form.number_field :duration, placeholder: "Enter number of weeks only." %>
-  </div>
-
   <div class="field">
     <%= form.label "Purpose for Loan?" %>
-    <%= form.number_field :purpose, placeholder: "Enter number of weeks only." %>
+    <%= form.text_field :purpose %>
   </div>  
 
   <div class="field">
