@@ -1,0 +1,10 @@
+
+<% if user_signed_in? && current_user.admin? %>
+  <div class="">
+    <h2>Admin Users Only can see this</h2>
+  </div>
+<% else %>
+  <div class="">
+    <h2>All Users can see this</h2>
+  </div>
+<% end %>
