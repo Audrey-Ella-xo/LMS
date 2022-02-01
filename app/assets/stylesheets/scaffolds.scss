@@ -1,6 +1,6 @@
-$primary-color-dark: #5fb523;
-$primary-color: #8bc34a;
-$primary-color-light: #dcedc8;
+$primary-color-dark: #0741AF;
+$primary-color: #5F4AB6 ;
+$primary-color-light: #F0EDFF;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
 
@@ -191,5 +191,14 @@ form {
   border: 1px solid #bdbdbd;
   border-radius: 4px;
   padding: 8px;
-  background-color: #dcedc8;
+  background-color: #F0EDFF;
+}
+
+.navbar {
+  margin: -50px;
+  background-color: $primary-color-light;
+}
+
+.container {
+  margin-top: 100px;
 }
