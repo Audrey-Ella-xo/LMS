@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
-    <aside class="side-bar">
-        <div class="user_info">
+  <aside class="side-bar">
+        <%# <div class="user_info"> %>
 
         <%#   <% if current_user.picture? %>
         <%# <%= image_tag current_user.picture.url, class: "profile"%> %>
@@ -9,52 +9,34 @@
         <%# <% end %> %> %>           
         <%# <h2><%= current_user.name %> %>
         <%# <%= current_user.lastname %></h2> %>
-        </div>
+        <%# </div> %>
     <hr>
+    <hr><hr><hr><hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li><%= link_to 'Dashboard', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-          Dashboard
-        </a>
-      </li>
       <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-          Orders
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-white">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-          Customers
-        </a>
+        <div class= 'nav-link'>
+          <i class="fas fa-project-diagram"></i>
+          <%= link_to 'Dashboard', loaners_path %>
+        </div>
       </li>
     </ul>
     <hr>
-    <div class="dropdown">
-      <%# <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"> %>
-        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-        <strong>mdo</strong>
-      <%# </a> %>
+    <div class="dropdown user_info">
+    <hr>
+      <img src="https://github.com/mdo.png" alt="" class="profile">
+        
       
-      <ul class="">
+      <ul class=" flex-column mb-auto">
         <% if user_signed_in? %>
           <li><%= link_to 'My Profile', profile_path(current_user), class: 'nav-link' %></li>
           <hr>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
         <% else %>
-         <li><%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %></li>
+          <li><%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %></li>
           <hr>
           <li><%= link_to 'Register', new_user_registration_path, class: 'nav-link' %></li>
         <% end %>
       </ul>
     </div>
-    </aside>
+  </aside>
 <% end %>
