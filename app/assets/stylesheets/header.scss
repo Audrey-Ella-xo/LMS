@@ -1,0 +1,62 @@
+$primary-color-dark: #0741AF;
+$primary-color: #5F4AB6 ;
+$primary-color-light: #F0EDFF;
+$primary-color-text: #212121;
+$divider-color: #bdbdbd;
+header {
+    background-color: $primary-color-dark;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:5;
+    .naver {
+        background-color:  $primary-color-light;
+        margin: 0 auto;
+        // width: 300px;
+    }
+    a {
+      color: #fff;
+    
+      &:visited {
+        color: #f0f0f0;
+      }
+    
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .namer {
+      padding-top: 3vh;
+      text-align: center;
+      font-size: 1.3em;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+  }
+  
+
+}
+
+.row {
+    margin-left: 0;
+}
+
+.col-left {
+    // width: 300px;
+    width: 10%;
+    height: 115px;
+}
+
+.col-right {
+    // margin-left: 300px;
+    width: 90%;
+    height: 115px;
+}
+  
+
+// nav {
+//     li {
+//         color: #fff;
+//     }
+// }

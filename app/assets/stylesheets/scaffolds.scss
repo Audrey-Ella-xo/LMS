@@ -7,7 +7,8 @@ $divider-color: #bdbdbd;
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px; }
+  padding-top: 160px;
+  }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -194,11 +195,8 @@ form {
   background-color: #F0EDFF;
 }
 
-.navbar {
-  margin: -50px;
-  background-color: $primary-color-light;
-}
-
-.container {
-  margin-top: 100px;
-}
+// .navbar {
+//   padding-right: 100px;
+//   margin-left: -50px;
+//   // background-color: $primary-color-light;
+// }
