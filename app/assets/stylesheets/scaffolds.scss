@@ -5,10 +5,12 @@ $primary-color-text: #212121;
 $divider-color: #bdbdbd;
 
 body {
-  background-color: #fff;
+  // background-color: #fff;
+  background: linear-gradient(#f3f4f7, #0741AF);
   color: #333;
   padding-top: 160px;
-  }
+  min-height: 100vh;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

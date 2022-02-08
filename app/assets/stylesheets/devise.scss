@@ -1,0 +1,123 @@
+.login-box {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: #0742af69;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+
+	h2 {
+		margin: 0 0 30px;
+		padding: 0;
+		color: #fff;
+		text-align: center;
+	}
+
+	.user-box {
+		position: relative;
+
+		label {
+			position: absolute;
+			// top:0;
+			// left: 0;
+			// padding: 10px 0;
+			// font-size: 16px;
+			// color: #fff;
+			pointer-events: none;
+			transition: .5s;
+			// top: -20px;
+			left: 0;
+			color: #03e9f4;
+			font-size: 12px;
+		}
+
+		input {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #fff;
+			margin-bottom: 30px;
+			border: none;
+			border-bottom: 1px solid #fff;
+			border-radius: 4px;
+			outline: none;
+			background: transparent;
+
+			&:focus, &:valid {
+				// ~label {
+				// 	top: -20px;
+				// 	left: 0;
+				// 	color: #03e9f4;
+				// 	font-size: 12px;
+				// }
+				top:0;
+				left: 0;
+				padding: 10px 0;
+				margin-left: 20px;
+				font-size: 16px;
+				color: #fff;
+			}
+		}
+  
+		input[type="checkbox"] {
+		width: fit-content;
+		// padding-bottom: 30px;
+		}
+	}
+
+	.submit {
+		background: transparent;
+		position: relative;
+		display: inline-block;
+		padding: 10px 20px;
+		color: #03e9f4;
+		font-size: 14px;
+		border: 1px solid #03e9f4;
+		border-radius: 0%;
+		margin-top: 30px;
+		letter-spacing: 4px;
+	}
+
+	.submit:hover {
+		background: #03e9f4;
+		color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #03e9f4,
+					0 0 25px #03e9f4,
+					0 0 50px #03e9f4,
+					0 0 100px #03e9f4;
+	}	
+
+	a {
+		position: relative;
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 12px;
+		text-decoration: none;
+		text-transform: uppercase;
+		overflow: hidden;
+		transition: .5s;
+		margin-top: 10px;
+		letter-spacing: 4px;
+		background: none;
+	}
+	
+	a:hover {
+		background: #03e9f4;
+		color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 0 2px #03e9f4,
+					0 0 4px #03e9f4,
+					0 0 6px #03e9f4,
+					0 0 8px #03e9f4;
+	}
+}
+
+.tiny {
+	margin-top: -100px;
+}
+
