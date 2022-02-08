@@ -2,7 +2,7 @@
 	position: relative;
 	top: 50%;
 	left: 50%;
-	width: 400px;
+	width: 800px;
 	padding: 40px;
 	transform: translate(-50%, -50%);
 	background: #0742af69;
@@ -48,12 +48,6 @@
 			background: transparent;
 
 			&:focus, &:valid {
-				// ~label {
-				// 	top: -20px;
-				// 	left: 0;
-				// 	color: #03e9f4;
-				// 	font-size: 12px;
-				// }
 				top:0;
 				left: 0;
 				padding: 10px 0;
