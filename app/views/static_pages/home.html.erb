@@ -2,11 +2,15 @@
 <% if user_signed_in? && current_user.admin? %>
   <div class="">
   <% provide(:name, "Admin") %>
-    <h2>Admin Users Only can see this</h2>
+    <h2>Get started here</h2>
+    <%= link_to "View All Loaners Profiles", profiles_path %>
+    <%= link_to 'Edit Profile', profile_path(current_user), class: '#' %>
   </div>
 <% else %>
   <div class="">
   <% provide(:name, "All Users") %>
-    <h2>All Users can see this</h2>
+    <h2>Get started here</h2>
+    <%= link_to 'View Dashboard', loaners_path %>
+    <%= link_to 'Edit Profile', profile_path(current_user), class: '#' %>
   </div>
 <% end %>
