@@ -14,10 +14,17 @@
     <hr><hr><hr><hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li>
+        <% if current_user.admin? %>
         <div class= 'nav-link'>
-          <i class="fas fa-project-diagram"></i>
-          <%= link_to 'Dashboard', loaners_path %>
+            <i class="fas fa-project-diagram"></i>
+            <%= link_to 'Dashboard', profiles_path %>
         </div>
+        <% else %>
+          <div class= 'nav-link'>
+            <i class="fas fa-project-diagram"></i>
+            <%= link_to 'Dashboard', loaners_path %>
+          </div>
+        <% end %>
       </li>
     </ul>
     <hr>

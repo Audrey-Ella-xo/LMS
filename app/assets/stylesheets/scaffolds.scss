@@ -128,21 +128,17 @@ label {
   }
 }
 
-form {
-  // width: 80%;
-  // margin: 8px 0;
-
-  // position: relative;
-	// top: 50%;
-	// left: 50%;
-	// width: 800px;
-	// padding: 40px;
-	// // transform: translate(-50%, -50%);
-	// // background: #0742af69;
-	// background: transparent;
-	// box-sizing: border-box;
-	// box-shadow: 0 15px 25px rgba(0,0,0,.6);
-	// border-radius: 10px;
+.form-scaff {
+  position: relative;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: transparent;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
 
 
   .field {
@@ -209,9 +205,3 @@ form {
   padding: 8px;
   background-color: #F0EDFF;
 }
-
-// .navbar {
-//   padding-right: 100px;
-//   margin-left: -50px;
-//   // background-color: $primary-color-light;
-// }
