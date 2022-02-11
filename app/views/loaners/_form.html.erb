@@ -1,4 +1,4 @@
-<%= form_with(model: loaner) do |form| %>
+<%= form_with model: loaner, class: "form-scaff" do |form| %>
   <% if loaner.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(loaner.errors.count, "error") %> prohibited this loaner from being saved:</h2>
