@@ -15,6 +15,7 @@
 
   <div class="actions">
     <%= form.submit %>
-    or <%= link_to "skip this step", next_wizard_path %>
+    or <%= link_to "skip this step", next_wizard_path %>||
+    <%= link_to 'Back', request.referrer, method: :get %>
   </div>
 <% end %>

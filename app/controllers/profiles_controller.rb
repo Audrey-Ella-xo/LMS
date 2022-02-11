@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[ show edit update destroy ]
+  before_action :is_admin?, only: %i[ update ]
   before_action :authenticate_user!
 
   # GET /profiles or /profiles.json
@@ -39,7 +40,6 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        # format.html { redirect_to profile_url(@profile), notice: "Profile was successfully updated." }
         format.html { redirect_to steps_after_registration_path, notice: "Profile was successfully updated." }
         format.json { render :show, status: :ok, location: @profile }
       else
@@ -72,5 +72,9 @@ class ProfilesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def profile_params
       params.require(:profile).permit(:firstname, :lastname, :DOB, :Address, :workplace_address, :workplace, :monthly_net, :title, :marital_status, :gender, :phone, :nationality, :acc_name, :bank_name, :acc_number, :branch_name, :emp_phone, :emp_duration, :job_title, :other_income, :ref_title, :ref_address, :ref_email, :ref_firstname, :ref_gender, :ref_lastname, :ref_phone, :attachment, :image, :identification)
+    end
+
+    def is_admin? 
+      redirect_to profile_url(@profile), notice: "Profile was successfully updated."
     end
 end

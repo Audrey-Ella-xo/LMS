@@ -10,7 +10,13 @@
   <div class="">
   <% provide(:name, "All Users") %>
     <h2>Get started here</h2>
-    <%= link_to 'View Dashboard', loaners_path %>
-    <%= link_to 'Edit Profile', profile_path(current_user), class: '#' %>
+    <% if current_user.profile.empty? %>
+      <h2>Please edit your profile before you proceed!</h2>
+      <%= link_to 'Edit Profile', steps_after_registration_path(:personal) %>
+    <%else%>
+      <%= link_to 'View Dashboard', loaners_path %>
+      <%# <%= link_to 'show2 path', show2_path %> %>
+      <%= link_to 'View your Profile', profile_path(current_user), class: '#' %>
+    <% end %>
   </div>
 <% end %>

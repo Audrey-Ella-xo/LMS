@@ -3,6 +3,63 @@
 
 <h2>Personal Information Section</h2>
 
+<% if current_user.admin? %>
+
+<%= form_with model: @profile, class: "form-scaff"  do |form| %>
+  
+  <div class="field row mb-3">
+      <%= form.label "Title", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :title, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Marital Status", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :marital_status, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Gender", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :gender, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "First Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :firstname, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+      <%= form.label "Last Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-10">
+        <%= form.text_field :lastname, readonly:true %>
+      </div>
+  </div>
+
+  <div class="field row mb-3">
+    <%= form.label "Email", class: "form-label col-sm-2 col-form-label" %>
+    <div class="col-sm-10">
+      <div class="custom">
+      <%= current_user.email %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <div class="btn-box">
+      <%= link_to 'Edit', edit_profile_path(@profile), method: :get %>|
+      <%= link_to 'Back', request.referrer, method: :get %>
+    </div>
+  </div>
+<% end %>
+
+<% else %>
 <%= form_with model: @profile, class: "form-scaff"  do |form| %>
   
   <div class="field row mb-3">
@@ -255,4 +312,6 @@
       <%= link_to 'Back', request.referrer, method: :get %>
     </div>
   </div>
+<% end %>
+
 <% end %>

@@ -12,6 +12,23 @@
   <% end %>
 
   <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+      
+  </div>
+
+  <div class="field">
+      <%= form.label :marital_status %>
+      <%= form.text_field :marital_status %>
+     
+  </div>
+
+  <div class="field">
+      <%= form.label :gender %>
+      <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
     <%= form.label :firstname %>
     <%= form.text_field :firstname %>
   </div>
@@ -19,31 +36,6 @@
   <div class="field">
     <%= form.label :lastname %>
     <%= form.text_field :lastname %>
-  </div>
-
-  <div class="field">
-    <%= form.label :DOB %>
-    <%= form.date_select :DOB %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Address %>
-    <%= form.text_field :Address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :workplace_address %>
-    <%= form.text_field :workplace_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :workplace %>
-    <%= form.text_field :workplace %>
-  </div>
-
-  <div class="field">
-    <%= form.label :monthly_net %>
-    <%= form.number_field :monthly_net %>
   </div>
 
   <div class="actions">
