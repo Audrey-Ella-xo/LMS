@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header">
+    <h2>Personal Information</h2>
+  </div>
+  <div class="card-body row">
+    <p class="card-title col-sm-2">Title:</p>
+    <p class="card-text col-sm-10"><%= @profile.title%></p>
+  </div>
+
+  <div class="card-body row">
+    <p class="card-title col-sm-2">Name:</p>
+    <p class="card-text col-sm-10"><%= @profile.firstname%> <%= @profile.lastname%></p>
+  </div>
+
+  <div class="card-body row">
+    <p class="card-title col-sm-2">Gender:</p>
+    <p class="card-text col-sm-10"><%= @profile.gender%> </p>
+  </div>
+
+  <div class="card-body row">
+    <p class="card-title col-sm-2">Marital Status:</p>
+    <p class="card-text col-sm-10"><%= @profile.marital_status%> </p>
+  </div>
+</div>
+
+<br><br>
+
+<div class="actions">
+  <div class="btn-box">
+    <%= link_to 'Edit', edit_profile_path(@profile), method: :get %>|
+    <%= link_to 'Back', request.referrer, method: :get %>
+  </div>
+</div>

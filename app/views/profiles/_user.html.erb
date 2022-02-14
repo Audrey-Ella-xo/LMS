@@ -1,0 +1,208 @@
+<div class="card">
+    <div class="card-header">
+      <h2>Personal Information Section</h2>
+    </div>
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Title:</p>
+      <p class="card-text col-sm-10"><%= @profile.title%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Name:</p>
+      <p class="card-text col-sm-10"><%= @profile.firstname%> <%= @profile.lastname%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Email</p>
+      <p class="card-text col-sm-10"><%= current_user.email%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Marital Status:</p>
+      <p class="card-text col-sm-10"><%= @profile.marital_status%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Gender</p>
+      <p class="card-text col-sm-10"><%= @profile.gender%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Date of Birth:</p>
+      <p class="card-text col-sm-10"><%= @profile.DOB%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Means of Identification:</p>
+      <% if @profile.identification? == false %>
+      <p>Kindly upload means of identification!
+      <% else %>
+      <div class="card-text col-sm-10">
+        <iframe src=<%= @profile.identification_url %> width="400" height="400" style="border: none;" overflow="hidden"> </iframe>
+        <%= link_to 'Download Means of Identification', @profile.identification_url, target: "_blank" %>
+      </div>
+      <% end %>
+    </div>
+    
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Phone Number</p>
+      <p class="card-text col-sm-10"><%= @profile.phone%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Nationality</p>
+      <p class="card-text col-sm-10"><%= @profile.nationality%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Home Address</p>
+      <p class="card-text col-sm-10"><%= @profile.Address%></p>
+    </div>
+    
+  </div>
+
+  <br><br>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Bank Information Section</h2>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Bank Name:</p>
+      <p class="card-text col-sm-10"><%= @profile.bank_name%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Account Name:</p>
+      <p class="card-text col-sm-10"><%= @profile.acc_name%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Account Number:</p>
+      <p class="card-text col-sm-10"><%= @profile.acc_number%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Branch Name:</p>
+      <p class="card-text col-sm-10"><%= @profile.branch_name%></p>
+    </div>
+    
+  </div>
+
+  <br><br>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Employer/Business Information Section</h2>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Name of Employer/Business:</p>
+      <p class="card-text col-sm-10"><%= @profile.workplace%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Business/Employer's Address:</p>
+      <p class="card-text col-sm-10"><%= @profile.workplace_address%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Business/Employer's Phone Number:</p>
+      <p class="card-text col-sm-10"><%= @profile.emp_phone%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Duration of Employment</p>
+      <p class="card-text col-sm-10"><%= @profile.emp_duration%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Job Title</p>
+      <p class="card-text col-sm-10"><%= @profile.job_title%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Annual Gross Salary</p>
+      <p class="card-text col-sm-10"><%= @profile.monthly_net%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Other Income</p>
+      <p class="card-text col-sm-10"><%= @profile.other_income%></p>
+    </div>
+    
+  </div>
+
+  <br><br>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Referees Section</h2>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Title:</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_title%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Name:</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_firstname%> <%= @profile.ref_lastname%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Email</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_email %></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Gender</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_gender%></p>
+    </div>
+    
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Phone Number</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_phone%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Nationality</p>
+      <p class="card-text col-sm-10"><%= @profile.nationality%></p>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Address</p>
+      <p class="card-text col-sm-10"><%= @profile.ref_address%></p>
+    </div>    
+  </div>
+
+  <br><br>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Declaration Section</h2>
+    </div>
+
+    <div class="card-body row">
+      <p class="card-title col-sm-2">Download Decleration</p>
+      <% if @profile.attachment? == false %>
+      <p>Kindly upload Decleration!
+      <% else %>
+      <div class="card-text col-sm-10">
+        <iframe src=<%= @profile.attachment_url %> width="600" height="780" style="border: none;"> </iframe>
+        <%= link_to 'Download Declaration', @profile.attachment_url %>
+      </div>
+      <% end %>
+    </div>
+    
+</div>
+
+<br><br>
+
+<div class="actions">
+    <div class="btn-box">
+        <%= link_to 'Edit', steps_after_registration_path(:personal) %>|
+        <%= link_to 'Back', request.referrer, method: :get %>
+    </div>
+</div>
